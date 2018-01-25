@@ -8,7 +8,7 @@ import matplotlib.ticker as mtick
 import numpy as np
 
 if __name__ == "__main__":
-    X,Y = regression.loadDataSet('.\ex1data.txt')
+    X,Y = regression.loadDataSet('./ex1data.txt')
     m,n = X.shape
     # add all θ0 in each hypothesis equals 1
     X = np.concatenate((np.ones((m,1)),X),axis=1)
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     epsilon = 0.01
     
     # get learning result
-    result, timeConsumed = regression.bgd(rate, maxloop, epsilon, X, Y)
+    result, timeConsumed = regression.bgd(X, Y, rate, maxloop, epsilon)
     theta, errors, thetas = result
     
     # plot fitting line

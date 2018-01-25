@@ -73,7 +73,7 @@ def cost(theta, X, Y):
 
 
 @exeTime
-def bgd(X, Y, rate, maxloop, epsilon, initTheta):
+def bgd(X, Y, rate, maxloop, epsilon, initTheta=None):
 	""" batch gredient descent
 		Args:
 			X: training matrix
